@@ -4,29 +4,51 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    msg: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    moneyInfo:{},
     taskList:[{
-      taskId:1,
-      taskName:'hao'
+      taskId: 1,
+      taskIcon: '',
+      taskName: '武侠',
+      taskTags: '',
+      taskPrice: 16,
+      execStatus: 0
     }, {
       taskId: 2,
-      taskName: 'hao2'
+      taskIcon: '',
+      taskName: '选科',
+      taskTags: '',
+      taskPrice: 10,
+      execStatus: 0
     }, {
         taskId: 3,
-        taskName: 'hao3'
+        taskIcon: '',
+        taskName: '奖项',
+        taskTags: '',
+        taskPrice: 20,
+        execStatus: 0
     }, {
       taskId: 4,
-      taskName: 'hao4'
+      taskIcon: '',
+      taskName: '动作',
+      taskTags: '',
+      taskPrice: 30,
+      execStatus: 0
     }, {
       taskId: 5,
-      taskName: 'hao5'
+      taskIcon: '',
+      taskName: '喜剧',
+      taskTags: '',
+      taskPrice: 20,
+      execStatus: 0
     }, {
       taskId: 6,
-      taskName: 'hao6'
+      taskIcon: '',
+      taskName: '言情',
+      taskTags: '',
+      taskPrice: 10,
+      execStatus: 0
     }]
   },
   //事件处理函数
