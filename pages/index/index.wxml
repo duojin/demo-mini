@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="home-header flex-column">
+    <view class="top flex-row">
+      <view class="info-user">
+        <image class="avatar" src="{{userInfo.avatarUrl}}" />
+        <view class="nickname">{{userInfo.nickName}}</view>
+      </view>
+      <view class="info-income">
+        <view class="income-fee">0.00</view>
+        <view class="income-txt">今日收益</view>
+      </view>
+      <view class="info-withdraw flex-row">
+        <image class="info-withdraw-image" src="/images/home_withdraw_icon.png" />
+        <view class="info-withdraw-txt" >立即提现</view>
+      </view>
+    </view>
+    <view class="bottom flex-row">
+      <view class="info-addup flex-item flex-row">
+        <view class="info-txt">累计收入</view>
+        <view class="info-fee">0.00</view>
+      </view>
+      <view class="info-remain flex-item flex-row">
+        <view class="info-txt">帐户余额</view>
+        <view class="info-fee">0.00</view>
+      </view>
+    </view>
+  </view>
+  <view class="home-button">
+    <button type="primary">领取任务</button>
+  </view>
+  <view class="home-list">
+    <scroll-view scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+          <view wx:for="{{taskList}}" style="height: 300rpx;" >
+          {{item.taskName}}
+          </view>
+    </scroll-view>
+  </view>
+  <view class="home-footer">
+  </view>
+</view>

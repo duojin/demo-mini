@@ -1,0 +1,99 @@
+/**index.wxss**/
+/**头部区域**/
+.home-header {
+	background: #ffb70f;
+	padding: 30rpx;
+}
+/**头部区域 上部分**/
+.home-header .top {
+	height: 200rpx;
+}
+.home-header .top .info-user {
+  padding-top: 0;
+  padding-left: 0;
+  flex-grow:1;
+}
+.home-header .top .info-user .avatar {
+	display: block;
+	margin: 0 auto;
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 50%;
+	border: 1px solid #fee767;
+}
+.home-header .top .info-user .nickname {
+	color: #fff;
+	font-size: 30rpx;
+	line-height: 2.0;
+	text-align: center;
+}
+
+.home-header .top .info-income {
+  flex-grow:6;
+	text-align: center;
+}
+.home-header .top .info-income .income-fee{
+  font-size: 80rpx;
+  font-weight: 300;
+  color:#fff;
+}
+.home-header .top .info-income .income-txt {
+  color:#fff;
+	text-align: center;
+	font-size: 36rpx;
+  opacity:0.5;
+}
+
+.home-header .top .info-withdraw {
+  flex-grow:1;
+  height: 48rpx;
+  padding: 0rpx 6rpx;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-image: initial;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.info-withdraw-image {
+    width: 35rpx;
+    height: 35rpx;
+}
+.info-withdraw-txt {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  margin: 5rpx;
+}
+/**头部区域 下部分**/
+.home-header .bottom {
+	height: 80rpx;
+  color:#fff;
+	font-size: 32rpx;
+	text-align: center;
+}
+
+.home-header .bottom .flex-item {
+	width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.home-header .bottom .info-txt {
+  margin: 5rpx;
+  color:#fff;
+  opacity:0.5;
+}
+.home-header .bottom .info-fee {
+  margin: 5rpx;
+  color:#fff;
+  opacity:1.0;
+}
+/**按钮区域**/
+.home-button {
+  padding: 30rpx;
+}
+.home-button button {
+  background-color:#ff3369;
+}
+/**列表区域**/
+/**底部区域**/
