@@ -1,2 +1,44 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<wxs module="MoneyFmt" src="../../filter/MoneyFmt.wxs"></wxs>
+<view class="baseArea">
+  <view class="taskItem flex-row" bindtap="viewDetail">
+    <view class="item-left">
+      <image class="avatar" src="{{userInfo.avatarUrl}}" />
+    </view>
+    <view class="item-middle">
+      <view class="taskName">{{task.taskName}}</view>
+      <view class="taskTags">
+        <view class="tag" wx:for="{{task.taskTags}}" wx:key="item">{{item.tag}}</view>
+      </view>
+    </view>
+    <view class="item-right flex-column">
+      <view class="taskPrice">￥{{MoneyFmt.formatMoney(task.taskPrice)}}</view>
+      <view class="taskStatus">{{task.execStatus}}</view>
+    </view>
+  </view>
+</view>
+<view class="extraArea">
+  <view class="taskContents">
+    <view class="content-header">任务说明:</view>
+    <view class="content-items">
+      <text class="content-item" wx:for="{{task.taskContents}}" wx:for-index="idx">
+      {{idx+1}}、{{item}}
+      </text>
+    </view>
+  </view>
+  <view class="taskImages">
+    <view class="image-header">任务插图:</view>
+    <view class="image-items">
+      <text class="image-item" wx:for="{{task.taskContents}}" wx:for-index="idx">
+      {{idx+1}}、{{item}}
+      </text>
+    </view>
+  </view>
+</view>
+<view class="actionArea action-button">
+    <button type="primary">开始任务</button>
+</view>
+<view class="submitArea action-button">
+    <button type="primary">提交任务</button>
+</view>
+

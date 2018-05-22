@@ -1,1 +1,71 @@
 /* pages/detail/detail.wxss */
+/**任务基本信息区域**/
+.taskItem {
+  margin: 30rpx;
+  padding: 20rpx;
+	border-radius: 30rpx;
+  background-color:#fff;
+}
+.taskItem .avatar {
+	display: block;
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 50%;
+	border: 1px solid #fee767;
+}
+.taskItem .item-left {
+  flex-grow:1;
+}
+.taskItem .item-middle {
+  flex-grow:4;
+}
+.taskItem .item-middle .tag{
+  font-size: 30rpx;
+  background-color: #fee767;
+  margin: 10rpx;
+	border-radius: 10rpx;
+	border: 1px solid #ff3369;
+  display: inline-block;
+}
+.taskItem .item-right {
+  flex-grow:1;
+}
+.taskItem .item-right .taskPrice {
+  text-align:right;
+  color: #ff3369;
+  font-size: 50rpx;
+  margin-right: 10rpx;
+}
+.taskItem .item-right .taskStatus {
+  text-align:right;
+  margin-right: 10rpx;
+}
+/**任务说明区域**/
+.taskContents {
+  padding: 30rpx;
+}
+.content-header {
+  border-bottom: 1px solid #fee767;
+  margin-bottom: 0rpx;
+}
+.content-items {
+  color: red;
+}
+/**任务插图区域**/
+.taskImages {
+  padding: 30rpx;
+}
+.image-header {
+  border-bottom: 1px solid #fee767;
+  margin-bottom: 0rpx;
+}
+.image-items {
+  color: red;
+}
+/**动作按钮区域**/
+.action-button {
+  padding: 30rpx;
+}
+.action-button button {
+  background-color:#ff3369;
+}

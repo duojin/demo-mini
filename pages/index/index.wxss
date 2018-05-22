@@ -96,4 +96,44 @@
   background-color:#ff3369;
 }
 /**列表区域**/
+.home-list .taskItem {
+  margin: 30rpx;
+  padding: 20rpx;
+	border-radius: 30rpx;
+  background-color:#FBF9FE;
+}
+.taskItem .avatar {
+	display: block;
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 50%;
+	border: 1px solid #fee767;
+}
+.taskItem .item-left {
+  flex-grow:1;
+}
+.taskItem .item-middle {
+  flex-grow:4;
+}
+.taskItem .item-middle .tag{
+  font-size: 30rpx;
+  background-color: #fee767;
+  margin: 10rpx;
+	border-radius: 10rpx;
+	border: 1px solid #ff3369;
+  display: inline-block;
+}
+.taskItem .item-right {
+  flex-grow:1;
+}
+.taskItem .item-right .taskPrice {
+  text-align:right;
+  color: #ff3369;
+  font-size: 50rpx;
+  margin-right: 10rpx;
+}
+.taskItem .item-right .taskStatus {
+  text-align:right;
+  margin-right: 10rpx;
+}
 /**底部区域**/

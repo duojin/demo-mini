@@ -5,7 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    task: {
+      taskId: 1,
+      taskIcon: '',
+      taskName: '武侠',
+      taskTags: [{ tag: 'aaa' }, { tag: 'bbb' }],
+      taskPrice: 16,
+      execStatus: 0,
+      taskContents: ["先下载app先下载app先下载app先下载app先下载app先下载app先下载app先下载app先下载app先下载app先下载app先下载app先下载app先下载app","点击注册登录","卸载也可"],
+      taskImages:["","",""]
+    }
   },
 
   /**

@@ -1,2 +1,26 @@
 <!--pages/task/task.wxml-->
-<text>pages/task/task.wxml</text>
+<template name="taskList">
+  <wxs module="MoneyFmt" src="../../filter/MoneyFmt.wxs"></wxs>
+  <block wx:for="{{taskList}}" wx:key="item" style="height: 300rpx;" >
+      <view class="taskItem flex-row" bindtap="viewDetail">
+        <view class="item-left">
+          <image class="avatar" src="{{userInfo.avatarUrl}}" />
+        </view>
+        <view class="item-middle">
+          <view class="taskName">{{item.taskName}}</view>
+          <view class="taskTags">
+            <view class="tag" wx:for="{{item.taskTags}}" wx:key="item">{{item.tag}}</view>
+          </view>
+        </view>
+        <view class="item-right flex-column">
+          <view class="taskPrice">￥{{MoneyFmt.formatMoney(item.taskPrice)}}</view>
+          <view class="taskStatus">{{item.execStatus}}</view>
+        </view>
+      </view>
+    </block>
+</template>
+<view class="container">
+  <view class="home-list">
+      <template is="taskList" data="{{taskList: taskList}}"/>
+  </view>
+</view>

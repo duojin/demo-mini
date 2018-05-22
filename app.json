@@ -1,22 +1,22 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/task/task",
-    "pages/logs/logs"
+    "pages/detail/detail"
   ],
-  "window":{
-    "backgroundTextStyle":"white",
+  "window": {
+    "backgroundTextStyle": "white",
     "navigationBarBackgroundColor": "#feb70f",
     "navigationBarTitleText": "任务赚赚",
-    "navigationBarTextStyle":"dark",
-		"backgroundColor": "#efefef"
+    "navigationBarTextStyle": "dark",
+    "backgroundColor": "#efefef"
   },
   "tabBar": {
-    "color":"#A4A4A4",
+    "color": "#A4A4A4",
     "selectedColor": "#F79926",
-    "backgroundColor":"#F7F7FA",
-    "borderStyle":"white",
-    "position":"bottom",
+    "backgroundColor": "#F7F7FA",
+    "borderStyle": "white",
+    "position": "bottom",
     "list": [
       {
         "pagePath": "pages/task/task",

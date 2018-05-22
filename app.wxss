@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
+  background-color:#eeeeee;
 }
 .flex-row {
   display: flex;

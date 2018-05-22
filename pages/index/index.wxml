@@ -30,11 +30,8 @@
     <button type="primary">领取任务</button>
   </view>
   <view class="home-list">
-    <scroll-view scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-          <view wx:for="{{taskList}}" style="height: 300rpx;" >
-          {{item.taskName}}
-          </view>
-    </scroll-view>
+      <import src="../task/task.wxml"/>
+      <template is="taskList" data="{{taskList: taskList}}"/>
   </view>
   <view class="home-footer">
   </view>

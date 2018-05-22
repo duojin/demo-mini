@@ -11,7 +11,7 @@ Page({
       taskId: 1,
       taskIcon: '',
       taskName: '武侠',
-      taskTags: '',
+      taskTags: [{ tag: 'aaa' }, { tag: 'bbb' }],
       taskPrice: 16,
       execStatus: 0
     }, {
@@ -50,12 +50,6 @@ Page({
       taskPrice: 10,
       execStatus: 0
     }]
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
@@ -115,11 +109,49 @@ Page({
   onUnload: function () {
     // Do something when page close.
   },
+  lower: function () {
+    console.log("下拉了....")
+  },
   onPullDownRefresh: function () {
-    // Do something when pull down.
+    console.log("onPullDownRefresh")
+    this.setData({
+      taskList: [{
+        taskId: 1,
+        taskIcon: '',
+        taskName: '武侠1',
+        taskTags: [{ tag: 'aaa' }, { tag: 'bbb' }],
+        taskPrice: 16,
+        execStatus: 0
+      }, {
+        taskId: 2,
+        taskIcon: '',
+        taskName: '选科1',
+        taskTags: '',
+        taskPrice: 10,
+        execStatus: 0
+      }]
+    });
   },
   onReachBottom: function () {
-    // Do something when page reach bottom.
+    var that = this;
+    var data = that.data.taskList;
+    that.setData({
+      taskList: [{
+        taskId: 1,
+        taskIcon: '',
+        taskName: '武侠',
+        taskTags: [{ tag: 'aaa' }, { tag: 'bbb' }],
+        taskPrice: 16,
+        execStatus: 0
+      }, {
+        taskId: 2,
+        taskIcon: '',
+        taskName: '选科',
+        taskTags: '',
+        taskPrice: 10,
+        execStatus: 0
+      }].concat(data)
+    });
   },
   onShareAppMessage: function () {
     // return custom share data when user share.
@@ -133,12 +165,8 @@ Page({
     console.log(item.text)
   },
   // Event handler.
-  viewTap: function () {
-    this.setData({
-      text: 'Set some data for updating view.'
-    }, function () {
-      // this is setData callback
-    })
+  viewDetail: function () {
+    wx.navigateTo({ url:"../detail/detail"});
   },
   customData: {
     hi: 'MINA'
